@@ -86,7 +86,7 @@ Two Secrets Manager secrets are created, each encrypted with the module-managed 
 
 Pull them by ARN:
 - `admin_user_secret_arn` — full admin access (`+@all`).
-- `user_secret_arn` — standard user access (`+@all -@admin -@dangerous`).
+- `user_secret_arn` — standard user access (`+@all -@admin -@dangerous +info`; `INFO` is re-granted so clients can discover server version and replication topology).
 
 ### State-hardening with write-only attributes
 

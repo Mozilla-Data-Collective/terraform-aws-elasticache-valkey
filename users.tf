@@ -24,7 +24,7 @@ resource "aws_elasticache_user" "standard" {
   user_id              = "${var.name}-valkey-standard"
   user_name            = "standard"
   engine               = "valkey"
-  access_string        = "on ~* &* +@all -@admin -@dangerous"
+  access_string        = "on ~* &* +@all -@admin -@dangerous +info"
   passwords_wo         = random_password.standard.result
   passwords_wo_version = 1
 
