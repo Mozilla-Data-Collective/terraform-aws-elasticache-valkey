@@ -3,11 +3,16 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "06:07"
-      timezone: "Australia/Melbourne"
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
     cooldown:
-      default-days: 1
+      default-days: 3
+    groups:
+      minor-and-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
     labels:
       - "dependencies"
       - "actions"
@@ -20,11 +25,16 @@ updates:
       - "/"
       - "/examples/basic"
     schedule:
-      interval: "daily"
-      time: "06:07"
-      timezone: "Australia/Melbourne"
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
     cooldown:
-      default-days: 1
+      default-days: 3
+    groups:
+      minor-and-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
     labels:
       - "dependencies"
       - "terraform"
